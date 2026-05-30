@@ -1,5 +1,5 @@
 import { TypeAnimation } from 'react-type-animation';
-import TechStack from '../components/TechStack';
+// import TechStack from '../components/TechStack';
 
 export default function Home({ color }: { color: string }) {
     const glowColors: Record<string, string> = {
