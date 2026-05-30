@@ -56,7 +56,7 @@ export default function Navbar({ currentPage, setCurrentPage, color }: NavbarPro
                     onClick={() => setIsOpen(!isOpen)} 
                     className={`md:hidden text-slate-400 ${currentHoverColor} text-xs font-mono font-bold tracking-widest cursor-pointer uppercase transition-colors`}
                 >
-                    {isOpen ? "[ chiudi ]" : "[ menu ]"}
+                    {isOpen ? "[ close ]" : "[ menu ]"}
                 </button>
                 {isOpen && (
                 <div className="absolute top-16 left-4 right-4 bg-slate-900/95 backdrop-blur-lg border border-slate-700/50 rounded-2xl p-4 flex flex-col gap-3 shadow-2xl md:hidden">
