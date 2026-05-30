@@ -1,5 +1,5 @@
 import { TypeAnimation } from 'react-type-animation';
-// import TechStack from '../components/TechStack';
+import TechStack from '../components/TechStack';
 
 export default function Home({ color }: { color: string }) {
     const glowColors: Record<string, string> = {
@@ -23,7 +23,7 @@ export default function Home({ color }: { color: string }) {
                     <h1 className="text-5xl md:text-8xl font-black text-white">
                 SELECT <span className={`${currentTextColor}`}>*</span> FROM <span className={`${currentTextColor} lowercase`}>noyla</span>
                 </h1>
-                <p className="text-slate-400 mt-2 text-xl">Query OK, 1 <span className={`${currentTextColor} font-semibold text-2xl`}>
+                <p className="align-center text-slate-400 mt-2 text-xl">Query OK, 1 <span className={`${currentTextColor} font-semibold text-2xl`}>
                 <TypeAnimation
                     sequence={[
                     'FULL STACK EXPLORER',
@@ -36,7 +36,7 @@ export default function Home({ color }: { color: string }) {
                     repeat={Infinity}
                 />    
                 </span>affected (0.02 sec)</p></div>
+                <div className="mt-20 md:mt-30"><TechStack/></div>
             </div>
-            
         )
 }
