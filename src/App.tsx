@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Card from "./components/Card";
+// import Card from "./components/Card";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Projects from "./pages/Projects";
+// import Projects from "./pages/Projects";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("/");
