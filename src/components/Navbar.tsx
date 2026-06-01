@@ -29,7 +29,7 @@ export default function Navbar({ currentPage, setCurrentPage, color }: NavbarPro
 
     return (
         <nav className="w-full fixed top-4 left-0 z-50 px-4 flex justify-center">
-            <div className="w-full max-w-5xl bg-slate-800 border border-slate-700 rounded-2xl h-14 px-6 flex items-center justify-between shadow-lg">
+            <div className="w-full max-w-5xl bg-slate-800/50 border border-slate-700 rounded-2xl h-14 px-6 flex items-center justify-between shadow-lg backdrop-blur-lg">
                 <div className={`font-mono text-base font-bold tracking-tight ${activeTextColor}`}>
                     noyla<span className="text-slate-400">.dev</span>
                 </div>

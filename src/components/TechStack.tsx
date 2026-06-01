@@ -14,7 +14,7 @@ import {
 
 export default function TechStack() {
     return (
-        <div className="mt-12 flex flex-col gap-6">
+        <div className="mt-4 flex flex-col gap-6">
             <div>
                 <h3 className="font-mono text-slate-500 text-xs uppercase tracking-wider mb-3">FRONTEND STACK</h3>
                 <div className="flex flex-wrap items-center gap-4">
@@ -24,6 +24,7 @@ export default function TechStack() {
                         color="hover:bg-sky-500/10"
                         borderColor="hover:border-sky-500/50"
                         textColor="group-hover:text-sky-300"
+                        shadowColor="hover:shadow-[0_0_15px_rgba(14,165,233,0.25)]"
                     />
                     <Badge
                         Icon={SiTypescript} 
@@ -31,6 +32,7 @@ export default function TechStack() {
                         color="hover:bg-blue-500/10"
                         borderColor="hover:border-blue-500/50"
                         textColor="group-hover:text-blue-300"
+                        shadowColor="hover:shadow-[0_0_15px_rgba(59,130,246,0.25)]"
                     />
                     <Badge
                         Icon={SiJavascript} 
@@ -38,6 +40,7 @@ export default function TechStack() {
                         color="hover:bg-yellow-500/10"
                         borderColor="hover:border-yellow-500/50"
                         textColor="group-hover:text-yellow-200"
+                        shadowColor="hover:shadow-[0_0_15px_rgba(234,179,8,0.2)]"
                     />
                     <Badge
                         Icon={SiTailwindcss} 
@@ -45,6 +48,7 @@ export default function TechStack() {
                         color="hover:bg-cyan-500/10"
                         borderColor="hover:border-cyan-500/50"
                         textColor="group-hover:text-cyan-200"
+                        shadowColor="hover:shadow-[0_0_15px_rgba(6,182,212,0.25)]"
                     />
                     <Badge
                         Icon={SiCss} 
@@ -52,6 +56,7 @@ export default function TechStack() {
                         color="hover:bg-blue-600/10"
                         borderColor="hover:border-blue-600/50"
                         textColor="group-hover:text-blue-400"
+                        shadowColor="hover:shadow-[0_0_15px_rgba(37,99,235,0.25)]"
                     />
                 </div>
             </div>
@@ -64,6 +69,7 @@ export default function TechStack() {
                         color="hover:bg-emerald-800/10"
                         borderColor="hover:border-emerald-800/50"
                         textColor="group-hover:text-emerald-300"
+                        shadowColor="hover:shadow-[0_0_15px_rgba(6,150,99,0.25)]"
                     /> 
                     <Badge
                         Icon={SiPython} 
@@ -71,6 +77,7 @@ export default function TechStack() {
                         color="hover:bg-orange-400/10"
                         borderColor="hover:border-yellow-600/30"
                         textColor="group-hover:text-yellow-300"
+                        shadowColor="hover:shadow-[0_0_15px_rgba(251,146,60,0.25)]"
                     /> 
                 </div>
             </div>
@@ -83,6 +90,7 @@ export default function TechStack() {
                         color="hover:bg-sky-600/10"
                         borderColor="hover:border-sky-600/50"
                         textColor="group-hover:text-sky-300"
+                        shadowColor="hover:shadow-[0_0_15px_rgba(3,105,161,0.25)]"
                     /> 
                     <Badge
                         Icon={SiGit} 
@@ -90,6 +98,7 @@ export default function TechStack() {
                         color="hover:bg-orange-600/10"
                         borderColor="hover:border-orange-600/50"
                         textColor="group-hover:text-orange-300"
+                        shadowColor="hover:shadow-[0_0_15px_rgba(234,88,12,0.3)]"
                     /> 
                     <Badge
                         Icon={SiGithub} 
@@ -97,10 +106,10 @@ export default function TechStack() {
                         color="hover:bg-zinc-100/10"
                         borderColor="hover:border-zinc-100/30"
                         textColor="group-hover:text-white"
+                        shadowColor="hover:shadow-[0_0_15px_rgba(255,255,255,0.15)]"
                     /> 
                 </div>
             </div>
-
         </div>
     )
 }
