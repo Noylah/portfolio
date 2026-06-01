@@ -33,6 +33,12 @@ export default function Navbar({ currentPage, setCurrentPage, color }: NavbarPro
                 <div className={`font-mono text-base font-bold tracking-tight ${activeTextColor}`}>
                     noyla<span className="text-slate-400">.dev</span>
                 </div>
+                <div 
+                    className="opacity-50 flex-1 h-full border-l border-r border-slate-700 my-0 mx-2 hidden sm:block" 
+                    style={{
+                        backgroundImage: 'repeating-linear-gradient(-45deg, transparent, transparent 8px, #334155 8px, #334155 9.5px)'
+                    }}
+                ></div>
                 <div className="hidden md:flex justify-end gap-6 font-code">
                     {links.map((link) => {
                         const isActive = currentPage === link.path;
@@ -41,7 +47,7 @@ export default function Navbar({ currentPage, setCurrentPage, color }: NavbarPro
                             <button
                             key={link.title}
                             onClick={() => setCurrentPage(link.path)}
-                            className={`text-sm uppercase font-semibold cursor-pointer transition-all duration-200 hover:-translate-y-[1px] ${
+                            className={`text-sm uppercase font-semibold cursor-pointer transition-all duration-200 hover:-translate-y-px ${
                                 isActive 
                                 ? `${activeTextColor}`
                                 : "text-slate-400 hover:text-white"
@@ -67,7 +73,7 @@ export default function Navbar({ currentPage, setCurrentPage, color }: NavbarPro
                             <button
                             key={link.title}
                             onClick={() => setCurrentPage(link.path)}
-                            className={`text-sm uppercase font-semibold cursor-pointer transition-all duration-200 hover:-translate-y-[1px] ${
+                            className={`text-sm uppercase font-semibold cursor-pointer transition-all duration-200 hover:-translate-y-px ${
                                 isActive 
                                 ? `${activeTextColor}`
                                 : "text-slate-400 hover:text-white"

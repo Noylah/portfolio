@@ -107,7 +107,7 @@ export default function TechStack() {
                         borderColor="hover:border-zinc-100/30"
                         textColor="group-hover:text-white"
                         shadowColor="hover:shadow-[0_0_15px_rgba(255,255,255,0.15)]"
-                    /> 
+                    />
                 </div>
             </div>
         </div>
