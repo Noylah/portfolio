@@ -15,7 +15,7 @@ export default function App() {
   const c = pureColors[currentPage] || "emerald";
 
   return (
-    <div className="min-h-screen w-full bg-slate-900 flex flex-col items-center gap-8 pb-12 pt-24">
+    <div className="min-h-screen w-full bg-slate-950 flex flex-col items-center gap-8 pb-12 pt-24">
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} color={c}/>
 
       {currentPage === "/" && <Home color={pureColors[currentPage]}/>}

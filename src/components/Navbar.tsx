@@ -33,7 +33,7 @@ export default function Navbar({ currentPage, setCurrentPage, color }: NavbarPro
                 <div className={`font-mono text-base font-bold tracking-tight ${activeTextColor}`}>
                     noyla<span className="text-slate-400">.dev</span>
                 </div>
-                <div className="hidden md:flex justify-end gap-6">
+                <div className="hidden md:flex justify-end gap-6 font-code">
                     {links.map((link) => {
                         const isActive = currentPage === link.path;
 

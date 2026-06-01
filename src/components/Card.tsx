@@ -6,13 +6,11 @@ interface CardProps {
     secondaryBtn?: string;
     primaryBtnClick?: () => void;
     secondaryBtnClick?: () => void;
-    color?: string; // Prende "emerald", "violet", "sky"
+    color?: string; 
 }
 
 export default function Card({ title, description, image, primaryBtn, secondaryBtn, primaryBtnClick, secondaryBtnClick, color = "emerald"}: CardProps) {
-    
-    // Questo mini-oggetto serve a far "vedere" le classi a Tailwind
-    const bgColors: Record<string, string> = {
+        const bgColors: Record<string, string> = {
         emerald: "bg-emerald-500 hover:bg-emerald-700",
         violet: "bg-violet-500 hover:bg-violet-700",
         sky: "bg-sky-500 hover:bg-sky-700"
