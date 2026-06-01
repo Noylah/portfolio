@@ -1,10 +1,10 @@
 import { Braces } from "lucide-react"
 import TechStack from "./TechStack"
 
-export default function Section() {
+export default function MainSection() {
     return (
         <div className="relative w-full max-w-6xl h-auto border border-slate-800 bg-slate-900/20 rounded-lg p-8 md:p-12">
-            <div className="absolute top-0 left-0 bottom-0 w-8 border-r border-dashed border-slate-800 rounded" style={{
+            <div className="absolute top-0 left-0 bottom-0 w-8 border-r border-slate-800 rounded" style={{
     backgroundImage: 'repeating-linear-gradient(-45deg, transparent, transparent 6px, #334155 6px, #334155 7.5px)'
     }}>
             </div>
@@ -18,6 +18,7 @@ export default function Section() {
                 <span>div.noyla</span>
             </div>
             <div className="pl-8 pr-2 py-2">
+                <span className="font-mono text-sm uppercase text-slate-400 mb-0">HOW I WORK</span>
                 <div className="w-full border-b border-slate-400/20 mb-0"></div>
                 <div className="flex items-center justify-start">
                     <p className="font-jakarta text-white text-xl">I create projects to solve real problems and to help people. I am a predominantly front-end developer but also have back-end skills.</p>
