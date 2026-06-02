@@ -1,36 +1,23 @@
 import { useState } from "react";
-
+import { useTheme } from '../theme'
 interface NavbarProps {
     currentPage: string;
     setCurrentPage: (page: string) => void;
-    color?: string;
 }
 
-export default function Navbar({ currentPage, setCurrentPage, color }: NavbarProps) {
+export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
     const [isOpen, setIsOpen] = useState(false);
     const links = [
     { title: "Home", path: "/"},
     { title: "About me", path: "/about"},
     { title: "Projects", path: "/projects"}
     ];
-    const textColors: Record<string, string> = {
-        emerald: "text-emerald-400",
-        violet: "text-violet-400",
-        sky: "text-sky-400"
-    };
-    const hoverColors: Record<string, string> = {
-        emerald: "hover:text-emerald-400",
-        violet: "hover:text-violet-400",
-        sky: "hover:text-sky-400"
-    };
-
-    const activeTextColor = textColors[color || "emerald"];
-    const currentHoverColor = hoverColors[color || "emerald"];
+    const { theme } = useTheme()
 
     return (
         <nav className="w-full fixed top-4 left-0 z-50 px-4 flex justify-center">
             <div className="w-full max-w-5xl bg-slate-800/50 border border-slate-700 rounded-2xl h-14 px-6 flex items-center justify-between shadow-lg backdrop-blur-lg">
-                <div className={`font-mono text-base font-bold tracking-tight ${activeTextColor}`}>
+                <div className={`font-mono text-base font-bold tracking-tight ${theme.text}`}>
                     noyla<span className="text-slate-400">.dev</span>
                 </div>
                 <div 
@@ -49,7 +36,7 @@ export default function Navbar({ currentPage, setCurrentPage, color }: NavbarPro
                             onClick={() => setCurrentPage(link.path)}
                             className={`text-sm uppercase font-semibold cursor-pointer transition-all duration-200 hover:-translate-y-px ${
                                 isActive 
-                                ? `${activeTextColor}`
+                                ? `${theme.text}`
                                 : "text-slate-400 hover:text-white"
                             }`}
                             >
@@ -60,7 +47,7 @@ export default function Navbar({ currentPage, setCurrentPage, color }: NavbarPro
                 </div>
                 <button 
                     onClick={() => setIsOpen(!isOpen)} 
-                    className={`md:hidden text-slate-400 ${currentHoverColor} text-xs font-mono font-bold tracking-widest cursor-pointer uppercase transition-colors`}
+                    className={`md:hidden text-slate-400 ${theme.hoverText} text-xs font-mono font-bold tracking-widest cursor-pointer uppercase transition-colors`}
                 >
                     {isOpen ? "[ close ]" : "[ menu ]"}
                 </button>
@@ -75,7 +62,7 @@ export default function Navbar({ currentPage, setCurrentPage, color }: NavbarPro
                             onClick={() => setCurrentPage(link.path)}
                             className={`text-sm uppercase font-semibold cursor-pointer transition-all duration-200 hover:-translate-y-px ${
                                 isActive 
-                                ? `${activeTextColor}`
+                                ? `${theme.text}`
                                 : "text-slate-400 hover:text-white"
                             }`}
                             >

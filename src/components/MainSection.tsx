@@ -1,7 +1,10 @@
 import { Braces } from "lucide-react"
 import TechStack from "./TechStack"
+import { useTheme } from '../theme'
+
 
 export default function MainSection() {
+    const { theme } = useTheme()
     return (
         <div className="relative w-full max-w-6xl h-auto border border-slate-800 bg-slate-900/20 rounded-lg p-8 md:p-12">
             <div className="absolute top-0 left-0 bottom-0 w-8 border-r border-slate-800 rounded" style={{
@@ -44,8 +47,8 @@ export default function MainSection() {
                 </div>
                     <div className="px-4 pb-4 bg-slate-950/40 rounded-md border border-blue-900/20">
                         <div className="mb-0 mt-4 px-4 py-1 bg-slate-800/20 w-fit rounded-md border border-blue-900/20 flex items-center justify-center space-x-2">       
-                            <div className="w-fit h-fit p-1.5 rounded-md border border-sky-500/20 bg-sky-500/10 shadow-[0_0_15px_rgba(14,165,233,0.1)]">
-                                <Braces className="w-5 h-5 text-sky-400 stroke-[1.5]" />
+                            <div className={`w-fit h-fit p-1.5 rounded-md border ${theme.mainBg} ${theme.mainBorder} shadow-[0_0_15px_rgba(14,165,233,0.1)]`}>
+                                <Braces className={`w-5 h-5 ${theme.mainIcon} stroke-[1.5]`} />
                             </div>
                             <span className="font-jakarta text-white text-xl uppercase text-center font-bold">Tech Stack</span>
                         </div>
