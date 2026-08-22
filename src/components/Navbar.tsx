@@ -9,11 +9,22 @@ export default function Navbar() {
   return (
     <nav className="w-full fixed top-4 left-0 z-50 px-4 flex justify-center">
       <div className="w-full max-w-5xl bg-slate-800/50 border border-slate-700 rounded-2xl h-14 px-6 flex items-center justify-between shadow-lg backdrop-blur-lg">
-        <div
-          className={`font-mono text-base font-bold tracking-tight ${theme.text}`}
+        <a
+          href="https://github.com/noylah"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Open Noyla's GitHub profile"
+          className={`group flex items-center gap-2 font-mono text-base font-bold tracking-tight ${theme.text}`}
         >
-          noyla<span className="text-slate-400">.dev</span>
-        </div>
+          <img
+            src="https://github.com/noylah.png"
+            alt=""
+            className="h-8 w-8 rounded-full border border-slate-500/70 object-cover shadow-sm ring-2 ring-slate-700/40 transition-transform duration-200 group-hover:scale-105"
+          />
+          <span>
+            noyla<span className="text-slate-400">.dev</span>
+          </span>
+        </a>
         <div
           className="opacity-50 flex-1 h-full border-l border-r border-slate-700 my-0 mx-2 hidden sm:block"
           style={{
