@@ -1,29 +1,86 @@
-import { useTheme } from '../theme'
+import { useTheme } from "../theme";
 interface CardProps {
-    title: string;
-    description: string;
-    image?: string;
-    primaryBtn?: string;
-    secondaryBtn?: string;
-    primaryBtnClick?: () => void;
-    secondaryBtnClick?: () => void;
+  title: string;
+  description: string;
+  stack: string[];
+  status: string;
+  accent: string;
+  repository?: string;
+  project?: string;
+  pullRequest?: string;
 }
 
-export default function Card({ title, description, image, primaryBtn, secondaryBtn, primaryBtnClick, secondaryBtnClick}: CardProps) {
-    const { theme } = useTheme()
-    return (
-        <div className="shrink-0 w-full max-w-[384px] p-4 bg-slate-800/30 rounded-2xl border border-slate-700/50 flex flex-col items-center justify-center">
-            {image ? <div className={`h-44 w-full rounded-xl flex items-center justify-center mb-2 ${theme.cardBg}`}> <img src={image} alt="Card Image" className="w-full h-full object-cover rounded-xl"></img></div> : ""}
-            <div className="p-2 flex flex-col">
-                <h1 className="text-white font-semibold text-2xl">{title}</h1>
-                <p className="text-slate-400 text-md sm:text-sm">{description}</p>
-            </div>
-            { secondaryBtn || primaryBtn &&
-                <div className="self-end flex mt-auto py-2">
-                    { secondaryBtn ? <a className="text-slate-300 px-4 py-2 cursor-pointer hover:text-white" onClick={secondaryBtnClick}>{secondaryBtn}</a> : "" }
-                    { primaryBtn ? <a className={`text-white px-4 py-2 rounded-lg cursor-pointer font-semibold ${theme.cardBg}`} onClick={primaryBtnClick}>{primaryBtn}</a> : "" }
-                </div>
-            }
+export default function Card({
+  title,
+  description,
+  stack,
+  status,
+  accent,
+  repository,
+  project,
+  pullRequest,
+}: CardProps) {
+  const { theme } = useTheme();
+  const accentClass =
+    { sky: "bg-sky-400", emerald: "bg-emerald-400", rose: "bg-rose-400" }[
+      accent
+    ] ?? "bg-slate-400";
+  return (
+    <article className="card-reveal flex min-h-64 flex-col border border-slate-700/60 bg-slate-900/50 p-5 transition-transform duration-300 hover:-translate-y-1 hover:border-slate-500">
+      <div className={`mb-6 h-1 w-14 ${accentClass}`} />
+      <div className="mb-3 flex items-start justify-between gap-3">
+        <h3 className="font-jakarta text-2xl font-bold text-white">{title}</h3>
+        <span className={`${theme.text} shrink-0 font-mono text-[10px]`}>
+          {status}
+        </span>
+      </div>
+      <p className="mb-6 text-sm leading-relaxed text-slate-400">
+        {description}
+      </p>
+      <div className="mt-auto flex flex-wrap gap-2 border-t border-slate-800 pt-4">
+        {stack.map((item) => (
+          <span
+            key={item}
+            className="border border-slate-700 px-2 py-1 font-mono text-[10px] uppercase text-slate-500"
+          >
+            {item}
+          </span>
+        ))}
+      </div>
+      {(repository || project || pullRequest) && (
+        <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs uppercase">
+          {repository && (
+            <a
+              href={repository}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${theme.text} hover:text-white`}
+            >
+              repository -&gt;
+            </a>
+          )}
+          {project && (
+            <a
+              href={project}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${theme.text} hover:text-white`}
+            >
+              project -&gt;
+            </a>
+          )}
+          {pullRequest && (
+            <a
+              href={pullRequest}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${theme.text} hover:text-white`}
+            >
+              pull request -&gt;
+            </a>
+          )}
         </div>
-    )
+      )}
+    </article>
+  );
 }

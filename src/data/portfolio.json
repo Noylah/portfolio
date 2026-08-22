@@ -1,0 +1,94 @@
+{
+  "profile": {
+    "name": "noyla",
+    "domain": "dev",
+    "heroLines": [
+      "FULL STACK EXPLORER",
+      "DATA & WEB ENTHUSIAST",
+      "CURIOUS DEVELOPER"
+    ],
+    "intro": "I'm an Italian student who's curious about every layer of computer science. I focus on front-end development while exploring back-end systems, data and everything in between.",
+    "introHighlights": ["curious", "front-end development", "back-end systems", "data"],
+    "workflow": "I build small, useful products that solve real problems. I care about readable code, thoughtful interfaces and learning something new with every release. I use AI tools to enhance my workflow and improve my productivity, but I always make sure to understand the underlying concepts and not rely solely on them.",
+    "workflowHighlights": ["useful products", "readable code", "AI tools", "understand the underlying concepts"]
+  },
+  "navigation": [
+    { "label": "About", "href": "#about" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Contributions", "href": "#contributions" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "stack": {
+    "FRONTEND STACK": [
+      { "name": "React", "icon": "react", "color": "sky" },
+      { "name": "TypeScript", "icon": "typescript", "color": "blue" },
+      { "name": "JavaScript", "icon": "javascript", "color": "yellow" },
+      { "name": "NextJS", "icon": "nextjs", "color": "zinc" },
+      { "name": "Tailwind CSS", "icon": "tailwind", "color": "cyan" },
+      { "name": "CSS3", "icon": "css", "color": "blue" }
+    ],
+    "BACKEND STACK": [
+      { "name": "Django", "icon": "django", "color": "emerald" },
+      { "name": "Python", "icon": "python", "color": "orange" },
+      { "name": "Spring", "icon": "spring", "color": "green" },
+      { "name": "Java", "icon": "java", "color": "orange" },
+      { "name": "Node.js", "icon": "nodejs", "color": "green" }
+    ],
+    "DATABASES & TOOLS": [
+      { "name": "PostgreSQL", "icon": "postgresql", "color": "sky" },
+      { "name": "Git", "icon": "git", "color": "orange" },
+      { "name": "GitHub", "icon": "github", "color": "zinc" }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Silicon Lab",
+      "description": "A web application for comparing laptops and other products based on your needs, with custom use cases and product lists.",
+      "stack": ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      "status": "WIP",
+      "accent": "sky",
+      "project": "https://siliconlab.vercel.app",
+      "repository": "https://github.com/noylah/silicon"
+    },
+    {
+      "title": "Zenit",
+      "description": "A web application for managing classes and students entirely in local storage. It allows for a complete school management experience, including grades and other functionalities. This is one of my first projects.",
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "status": "ONLINE",
+      "accent": "emerald",
+      "repository": "https://github.com/noylah/zenit"
+    },
+    {
+      "title": "Noyla Portfolio",
+      "description": "A single-page interface designed like a calm session of code, where you can explore my projects, skills, and contact information.",
+      "stack": ["React", "TypeScript", "Vite"],
+      "status": "ONLINE",
+      "accent": "rose",
+      "repository": "https://github.com/noylah/portfolio"
+    }
+  ],
+  "contributions": [
+    {
+      "title": "Italian translation for dbdiagram.io",
+      "description": "Contributed to dbx-multi-lang by translating the dbdiagram.io interface into Italian.",
+      "stack": ["Open Source", "Italian", "Localization"],
+      "status": "MERGED",
+      "accent": "sky",
+      "repository": "https://github.com/holistics/dbx-multi-lang",
+      "project": "https://dbdiagram.io",
+      "pullRequest": "https://github.com/holistics/dbx-multi-lang/pull/46"
+    }
+  ],
+  "socials": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/noylah",
+      "icon": "github"
+    },
+    {
+      "label": "Telegram",
+      "href": "https://telegram.me/sconfittoo",
+      "icon": "telegram"
+    }
+  ]
+}

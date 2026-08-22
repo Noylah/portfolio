@@ -1,115 +1,111 @@
-import Badge from '../components/Badge';
-import { 
-  SiDjango, 
-  SiJavascript, 
-  SiReact, 
-  SiTypescript, 
-  SiPython, 
-  SiCss, 
-  SiTailwindcss, 
+import Badge from "./Badge";
+import portfolio from "../data/portfolio.json";
+import {
+  SiCss,
+  SiDjango,
+  SiGit,
+  SiGithub,
+  SiJavascript,
   SiPostgresql,
-  SiGit, 
-  SiGithub 
-} from 'react-icons/si';
+  SiPython,
+  SiReact,
+  SiSpring,
+  SiNodedotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiNextdotjs,
+} from "react-icons/si";
+import { DiJava } from "react-icons/di";
+import { Code2 } from "lucide-react";
+
+const icons = {
+  react: SiReact,
+  typescript: SiTypescript,
+  javascript: SiJavascript,
+  nextjs: SiNextdotjs,
+  tailwind: SiTailwindcss,
+  css: SiCss,
+  django: SiDjango,
+  python: SiPython,
+  postgresql: SiPostgresql,
+  git: SiGit,
+  github: SiGithub,
+  spring: SiSpring,
+  java: DiJava,
+  nodejs: SiNodedotjs,
+};
+
+const colors: Record<
+  string,
+  { color: string; borderColor: string; textColor: string }
+> = {
+  sky: {
+    color: "hover:bg-sky-500/10",
+    borderColor: "hover:border-sky-500/50",
+    textColor: "group-hover:text-sky-300",
+  },
+  blue: {
+    color: "hover:bg-blue-500/10",
+    borderColor: "hover:border-blue-500/50",
+    textColor: "group-hover:text-blue-300",
+  },
+  yellow: {
+    color: "hover:bg-yellow-500/10",
+    borderColor: "hover:border-yellow-500/50",
+    textColor: "group-hover:text-yellow-200",
+  },
+  cyan: {
+    color: "hover:bg-cyan-500/10",
+    borderColor: "hover:border-cyan-500/50",
+    textColor: "group-hover:text-cyan-200",
+  },
+  emerald: {
+    color: "hover:bg-emerald-500/10",
+    borderColor: "hover:border-emerald-500/50",
+    textColor: "group-hover:text-emerald-300",
+  },
+  green: {
+    color: "hover:bg-green-500/10",
+    borderColor: "hover:border-green-500/50",
+    textColor: "group-hover:text-green-300",
+  },
+  orange: {
+    color: "hover:bg-orange-500/10",
+    borderColor: "hover:border-orange-500/50",
+    textColor: "group-hover:text-orange-300",
+  },
+  zinc: {
+    color: "hover:bg-zinc-100/10",
+    borderColor: "hover:border-zinc-100/30",
+    textColor: "group-hover:text-white",
+  },
+};
 
 export default function TechStack() {
-    return (
-        <div className="mt-4 flex flex-col gap-6">
-            <div>
-                <h3 className="font-mono text-slate-500 text-xs uppercase tracking-wider mb-3">FRONTEND STACK</h3>
-                <div className="flex flex-wrap items-center gap-4">
-                    <Badge
-                        Icon={SiReact}
-                        name="React"
-                        color="hover:bg-sky-500/10"
-                        borderColor="hover:border-sky-500/50"
-                        textColor="group-hover:text-sky-300"
-                        shadowColor="hover:shadow-[0_0_15px_rgba(14,165,233,0.25)]"
-                    />
-                    <Badge
-                        Icon={SiTypescript} 
-                        name="Typescript"
-                        color="hover:bg-blue-500/10"
-                        borderColor="hover:border-blue-500/50"
-                        textColor="group-hover:text-blue-300"
-                        shadowColor="hover:shadow-[0_0_15px_rgba(59,130,246,0.25)]"
-                    />
-                    <Badge
-                        Icon={SiJavascript} 
-                        name="Javascript"
-                        color="hover:bg-yellow-500/10"
-                        borderColor="hover:border-yellow-500/50"
-                        textColor="group-hover:text-yellow-200"
-                        shadowColor="hover:shadow-[0_0_15px_rgba(234,179,8,0.2)]"
-                    />
-                    <Badge
-                        Icon={SiTailwindcss} 
-                        name="Tailwind CSS"
-                        color="hover:bg-cyan-500/10"
-                        borderColor="hover:border-cyan-500/50"
-                        textColor="group-hover:text-cyan-200"
-                        shadowColor="hover:shadow-[0_0_15px_rgba(6,182,212,0.25)]"
-                    />
-                    <Badge
-                        Icon={SiCss} 
-                        name="CSS3"
-                        color="hover:bg-blue-600/10"
-                        borderColor="hover:border-blue-600/50"
-                        textColor="group-hover:text-blue-400"
-                        shadowColor="hover:shadow-[0_0_15px_rgba(37,99,235,0.25)]"
-                    />
-                </div>
-            </div>
-            <div>
-                <h3 className="font-mono text-slate-500 text-xs uppercase tracking-wider mb-3">BACKEND STACK</h3>
-                <div className="flex flex-wrap items-center gap-4">
-                    <Badge
-                        Icon={SiDjango} 
-                        name="Django"
-                        color="hover:bg-emerald-800/10"
-                        borderColor="hover:border-emerald-800/50"
-                        textColor="group-hover:text-emerald-300"
-                        shadowColor="hover:shadow-[0_0_15px_rgba(6,150,99,0.25)]"
-                    /> 
-                    <Badge
-                        Icon={SiPython} 
-                        name="Python"
-                        color="hover:bg-orange-400/10"
-                        borderColor="hover:border-yellow-600/30"
-                        textColor="group-hover:text-yellow-300"
-                        shadowColor="hover:shadow-[0_0_15px_rgba(251,146,60,0.25)]"
-                    /> 
-                </div>
-            </div>
-            <div>
-                <h3 className="font-mono text-slate-500 text-xs uppercase tracking-wider mb-3">DATABASES & TOOLS</h3>
-                <div className="flex flex-wrap items-center gap-4">
-                    <Badge
-                        Icon={SiPostgresql} 
-                        name="SQL"
-                        color="hover:bg-sky-600/10"
-                        borderColor="hover:border-sky-600/50"
-                        textColor="group-hover:text-sky-300"
-                        shadowColor="hover:shadow-[0_0_15px_rgba(3,105,161,0.25)]"
-                    /> 
-                    <Badge
-                        Icon={SiGit} 
-                        name="Git"
-                        color="hover:bg-orange-600/10"
-                        borderColor="hover:border-orange-600/50"
-                        textColor="group-hover:text-orange-300"
-                        shadowColor="hover:shadow-[0_0_15px_rgba(234,88,12,0.3)]"
-                    /> 
-                    <Badge
-                        Icon={SiGithub} 
-                        name="GitHub"
-                        color="hover:bg-zinc-100/10"
-                        borderColor="hover:border-zinc-100/30"
-                        textColor="group-hover:text-white"
-                        shadowColor="hover:shadow-[0_0_15px_rgba(255,255,255,0.15)]"
-                    />
-                </div>
-            </div>
+  return (
+    <div className="mt-4 flex flex-col gap-6">
+      {Object.entries(portfolio.stack).map(([category, items]) => (
+        <div key={category}>
+          <h3 className="mb-3 font-mono text-xs uppercase tracking-wider text-slate-500">
+            {category}
+          </h3>
+          <div className="flex flex-wrap items-center gap-4">
+            {items.map((item) => {
+              const Icon = icons[item.icon as keyof typeof icons] ?? Code2;
+              const style = colors[item.color];
+              return (
+                <Badge
+                  key={item.name}
+                  Icon={Icon}
+                  name={item.name}
+                  {...style}
+                  shadowColor="hover:shadow-[0_0_15px_rgba(14,165,233,0.2)]"
+                />
+              );
+            })}
+          </div>
         </div>
-    )
+      ))}
+    </div>
+  );
 }
