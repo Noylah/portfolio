@@ -8,9 +8,19 @@
       "CURIOUS DEVELOPER"
     ],
     "intro": "I'm an Italian student who's curious about every layer of computer science. I focus on front-end development while exploring back-end systems, data and everything in between.",
-    "introHighlights": ["curious", "front-end development", "back-end systems", "data"],
+    "introHighlights": [
+      "curious",
+      "front-end development",
+      "back-end systems",
+      "data"
+    ],
     "workflow": "I build small, useful products that solve real problems. I care about readable code, thoughtful interfaces and learning something new with every release. I use AI tools to enhance my workflow and improve my productivity, but I always make sure to understand the underlying concepts and not rely solely on them.",
-    "workflowHighlights": ["useful products", "readable code", "AI tools", "understand the underlying concepts"]
+    "workflowHighlights": [
+      "useful products",
+      "readable code",
+      "AI tools",
+      "understand the underlying concepts"
+    ]
   },
   "navigation": [
     { "label": "About", "href": "#about" },
@@ -42,6 +52,15 @@
   },
   "projects": [
     {
+      "title": "Jwt ENV",
+      "description": "VS Code extension to generate secure, cryptographically random JWT secrets directly into your .env file with customizable key sizes and encoding formats.",
+      "stack": ["TypeScript", "NodeJS", "VSC API"],
+      "status": "ONLINE",
+      "accent": "sky",
+      "project": "https://marketplace.visualstudio.com/items?itemName=noylah.jwt-env",
+      "repository": "https://github.com/noylah/jwt-env"
+    },
+    {
       "title": "Silicon Lab",
       "description": "A web application for comparing laptops and other products based on your needs, with custom use cases and product lists.",
       "stack": ["React", "TypeScript", "Tailwind CSS", "Vite"],
@@ -51,20 +70,12 @@
       "repository": "https://github.com/noylah/silicon"
     },
     {
-      "title": "Zenit",
-      "description": "A web application for managing classes and students entirely in local storage. It allows for a complete school management experience, including grades and other functionalities. This is one of my first projects.",
-      "stack": ["HTML", "CSS", "JavaScript"],
-      "status": "ONLINE",
+      "title": "Medflow",
+      "description": "A full stack web application for a medical purpose, allows the management of patients, triages, encounters, authentication etc. with a tidy frontend and a solid backend (Rest API).",
+      "stack": ["React", "TypeScript", "Django"],
+      "status": "WIP",
       "accent": "emerald",
-      "repository": "https://github.com/noylah/zenit"
-    },
-    {
-      "title": "Noyla Portfolio",
-      "description": "A single-page interface designed like a calm session of code, where you can explore my projects, skills, and contact information.",
-      "stack": ["React", "TypeScript", "Vite"],
-      "status": "ONLINE",
-      "accent": "rose",
-      "repository": "https://github.com/noylah/portfolio"
+      "repository": "https://github.com/noylah/medflow"
     }
   ],
   "contributions": [

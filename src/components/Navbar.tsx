@@ -10,16 +10,16 @@ export default function Navbar() {
     <nav className="w-full fixed top-4 left-0 z-50 px-4 flex justify-center">
       <div className="w-full max-w-5xl bg-slate-800/50 border border-slate-700 rounded-2xl h-14 px-6 flex items-center justify-between shadow-lg backdrop-blur-lg">
         <a
-          href="https://github.com/noylah"
+          href="icon.png"
           target="_blank"
           rel="noreferrer"
           aria-label="Open Noyla's GitHub profile"
           className={`group flex items-center gap-2 font-mono text-base font-bold tracking-tight ${theme.text}`}
         >
           <img
-            src="https://github.com/noylah.png"
+            src="icon.png"
             alt=""
-            className="h-8 w-8 rounded-full border border-slate-500/70 object-cover shadow-sm ring-2 ring-slate-700/40 transition-transform duration-200 group-hover:scale-105"
+            className="h-10 w-10 transition-transform duration-200 group-hover:scale-105"
           />
           <span>
             noyla<span className="text-slate-400">.dev</span>

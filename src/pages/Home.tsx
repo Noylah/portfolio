@@ -16,18 +16,44 @@ export default function Home() {
   ]);
 
   useLayoutEffect(() => {
-    if (!pageRef.current || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (
+      !pageRef.current ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    )
+      return;
     const context = gsap.context(() => {
-      gsap.from(".hero-reveal", { opacity: 0, y: 18, duration: 0.7, stagger: 0.08, ease: "power2.out" });
-      gsap.from(".about-reveal", { opacity: 0, y: 24, duration: 0.8, delay: 0.25, ease: "power2.out" });
-      gsap.from(".card-reveal", { opacity: 0, y: 18, duration: 0.55, delay: 0.45, stagger: 0.08, ease: "power2.out" });
+      gsap.from(".hero-reveal", {
+        opacity: 0,
+        y: 18,
+        duration: 0.7,
+        stagger: 0.08,
+        ease: "power2.out",
+      });
+      gsap.from(".about-reveal", {
+        opacity: 0,
+        y: 24,
+        duration: 0.8,
+        delay: 0.25,
+        ease: "power2.out",
+      });
+      gsap.from(".card-reveal", {
+        opacity: 0,
+        y: 18,
+        duration: 0.55,
+        delay: 0.45,
+        stagger: 0.08,
+        ease: "power2.out",
+      });
     }, pageRef);
     return () => context.revert();
   }, []);
 
   return (
     <>
-      <main ref={pageRef} className="relative mx-auto w-full max-w-7xl px-4 pt-28 text-left sm:px-8 md:pt-36">
+      <main
+        ref={pageRef}
+        className="relative mx-auto w-full max-w-7xl px-4 pt-28 text-left sm:px-8 md:pt-36"
+      >
         <div
           className={`pointer-events-none absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full ${theme.glowColor} blur-[100px]`}
         />
@@ -44,7 +70,9 @@ export default function Home() {
           </h1>
           <p className="flex min-h-14 max-w-full flex-wrap items-center justify-center gap-x-1 text-base text-slate-400 sm:text-xl">
             <span>Query OK, 1</span>
-            <span className={`${theme.text} inline-block max-w-full font-semibold break-words`}>
+            <span
+              className={`${theme.text} inline-block max-w-full font-semibold wrap-break-word`}
+            >
               <TypeAnimation sequence={heroSequence} repeat={Infinity} />
             </span>
             <span>affected (0.02 sec)</span>
@@ -75,7 +103,10 @@ export default function Home() {
               ))}
             </div>
           </section>
-          <section id="contributions" className="section-reveal w-full scroll-mt-24">
+          <section
+            id="contributions"
+            className="section-reveal w-full scroll-mt-24"
+          >
             <div className="mb-6 flex items-end justify-between gap-4 border-b border-slate-800 pb-3">
               <div>
                 <p className="font-mono text-xs uppercase text-slate-500">
