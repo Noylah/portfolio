@@ -85,7 +85,13 @@ export default function Home() {
             <div className="mb-6 flex items-end justify-between gap-4 border-b border-slate-800 pb-3">
               <div>
                 <p className="font-mono text-xs uppercase text-slate-500">
-                  SELECT * FROM projects
+                  SELECT <span className={`${theme.text} lowercase`}>*</span>{" "}
+                  FROM{" "}
+                  <span className={`${theme.text} lowercase`}>projects</span>{" "}
+                  <span className="text-gray-700">
+                    -- LIMIT{" "}
+                    <span className={`lowercase`}>my_immagination</span>
+                  </span>
                 </p>
                 <h2 className="font-jakarta text-3xl font-black text-white sm:text-4xl">
                   Things I am building
@@ -110,7 +116,11 @@ export default function Home() {
             <div className="mb-6 flex items-end justify-between gap-4 border-b border-slate-800 pb-3">
               <div>
                 <p className="font-mono text-xs uppercase text-slate-500">
-                  SELECT * FROM contributions
+                  SELECT <span className={`${theme.text} lowercase`}>*</span>{" "}
+                  FROM{" "}
+                  <span className={`${theme.text} lowercase`}>
+                    contributions
+                  </span>
                 </p>
                 <h2 className="font-jakarta text-3xl font-black text-white sm:text-4xl">
                   My mark on open-source
