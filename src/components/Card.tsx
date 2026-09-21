@@ -22,7 +22,7 @@ export default function Card({
 }: CardProps) {
   const { theme } = useTheme();
   const accentClass =
-    { sky: "bg-sky-400", emerald: "bg-emerald-400", rose: "bg-rose-400" }[
+    { sky: "bg-sky-400", emerald: "bg-emerald-400", rose: "bg-rose-400", amber: "bg-amber-400" }[
       accent
     ] ?? "bg-slate-400";
   return (

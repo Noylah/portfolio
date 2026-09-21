@@ -57,7 +57,7 @@ export const appThemes = {
     text: "text-rose-400",
     hoverText: "hover:text-rose-400",
     cardBg: "bg-rose-500 hover:bg-rose-700",
-    mainBg: "bg-rose-500/10",
+      mainBg: "bg-rose-500/10",
     mainBorder: "border-rose-500/30",
     mainIcon: "text-rose-400"
   }

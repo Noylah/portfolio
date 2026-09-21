@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="w-full fixed top-4 left-0 z-50 px-4 flex justify-center">
       <div className="w-full max-w-5xl bg-slate-800/50 border border-slate-700 rounded-2xl h-14 px-6 flex items-center justify-between shadow-lg backdrop-blur-lg">
         <a
-          href="icon.png"
+          href="https://github.com/Noylah"
           target="_blank"
           rel="noreferrer"
           aria-label="Open Noyla's GitHub profile"
