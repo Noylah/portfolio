@@ -61,6 +61,14 @@
       "repository": "https://github.com/noylah/jwt-env"
     },
     {
+      "title": "Pizzeria KDS",
+      "description": "The Pizzeria Monitor is a Python application designed to provide a live, terminal-based dashboard for a pizzeria. It simulates incoming orders, tracks their preparation status, and displays key statistics.",
+      "stack": ["Python", "SQLite", "Rich Library"],
+      "status": "ONLINE",
+      "accent": "amber",
+      "repository": "https://github.com/noylah/pizzeria-monitor"
+    },
+    {
       "title": "Silicon Lab",
       "description": "A web application for comparing laptops and other products based on your needs, with custom use cases and product lists.",
       "stack": ["React", "TypeScript", "Tailwind CSS", "Vite"],
